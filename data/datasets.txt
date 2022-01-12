@@ -1,0 +1,1 @@
+Datasets used for Graph-Fraudster, including Cora, Citeseer, Pubmed, Cora_ML and Pol.Blogs.

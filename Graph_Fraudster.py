@@ -63,10 +63,10 @@ parser.add_argument('--out_dim', type=list, default=16, help='Dimensions of out 
 parser.add_argument('--dropout', type=float, default=0.5, help='Dropout rate (1 - keep  probability)')
 parser.add_argument('--weight_decay', type=float, default=5e-4, help='Weight for l2 loss on embedding matrix')
 # parser.add_argument('--X_NUM', type=int, default=716, help='Number of traing features')
-parser.add_argument('--seed', type=int, default=30, help='Random seed.')#15 20 30 35                   #cora 30 citeseer 10 polblogs 30 cora_ml 35 pubmed 35    #cora 35 citeseer 10 polblogs 35 cora_ml 35 pubmed 35
+parser.add_argument('--seed', type=int, default=30, help='Random seed.')
 parser.add_argument('--p', type=float, default=0.5, help='Hold data p.')
 parser.add_argument('--q', type=float, default=0.5, help='Hold data q.')
-parser.add_argument('--model', type=str, default='GCN', help='LP model.')
+parser.add_argument('--model', type=str, default='GCN', help='model.')
 parser.add_argument('--eps', type=float, default=0.01, help='Value of epsilon.')
 args = parser.parse_args()
 args.cuda = torch.cuda.is_available()

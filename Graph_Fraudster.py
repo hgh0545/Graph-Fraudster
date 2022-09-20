@@ -462,7 +462,6 @@ if __name__ == '__main__':
     print("######################time_shadow######################", time.time()-t2)
     torch.save(gen_emb_A, 'save_model/main/'+str(args.model)+'/'+str(args.datasets)+str(args.seed)+'/gen_emb_A.pth')
     print('Accuracy of server:', accuracy(pred_S[idx_test], labels[idx_test]).item())
-    print('Accuracy_Generated_A: ', accuracy(gen_pred_A[idx_test], labels[idx_test]).item())
 
     model_A = torch.load('save_model/main/'+str(args.model)+'/'+str(args.datasets)+str(args.seed)+'/A.pkl')
     model_A.eval()
@@ -567,8 +566,6 @@ if __name__ == '__main__':
         pred_ori.append(pred.cpu().detach().numpy())
         pred_ad.append(pred_atk.cpu().detach().numpy())
 
-
-    print("attack_success", i / len(target_nodes))
 
     print('Accuracy of server:', t_S / len(target_nodes))
 
